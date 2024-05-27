@@ -1,0 +1,81 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #F9F6F2;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 55px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile,
+.requests,
+.transactions {
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.image-container img {
+    margin-top: 30px;
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #72383D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+button:hover {
+    background-color: #9CABB4;
+}
+
+.home-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+}
+
+.home-button img {
+    width: 50px;
+    height: auto;
+}
+
+.comuneedy {
+    color: #72383D;
+    font-size: 40px;
+    font-family: "Bell MT", serif;
+    position: absolute;
+    top: auto;
+}

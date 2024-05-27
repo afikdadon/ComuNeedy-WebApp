@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Feedback</title>
+    <link rel="stylesheet" href="Service Request Page.css">
+</head>
+<body>
+<div class="comuneedy">ComuNeedy</div>
+<div class="container">
+    <div class="content">
+        <div class="header">
+            <img src="note icon.png" alt="note Icon" class="note-icon">
+            <h1>Service Feedback</h1>
+        </div>
+        <p>Thank you for using our service! We'd love to hear your feedback. Please provide your feedback below:</p>
+        <form>
+           <div class="input-container">
+                    <label for="star-rating">Star Rating</label>
+                    <div class="star-rating" id="star-rating">
+                        <span class="star" data-rating="1">&#9733;</span>
+                        <span class="star" data-rating="2">&#9733;</span>
+                        <span class="star" data-rating="3">&#9733;</span>
+                        <span class="star" data-rating="4">&#9733;</span>
+                        <span class="star" data-rating="5">&#9733;</span>
+                    </div>
+                    <input type="hidden" name="rating" id="rating">
+                </div>
+                <div class="input-container">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="input-container">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="input-container">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description"></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+     </div>
+</div>
+<div class="home-button">
+    <img src="home icon.png" alt="Home Icon">
+</div>
+<script src="service_feedback.js"></script>
+</body>
+</html>

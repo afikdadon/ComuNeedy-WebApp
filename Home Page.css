@@ -1,0 +1,186 @@
+body {
+    background-color: #F9F6F2;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #A2C4D9;
+}
+
+.comuneedy {
+    color: #72383D;
+    font-size: 40px;
+    font-family: "Bell MT", serif;
+}
+
+.navbar {
+    display: flex;
+    gap: 30px;
+    margin: auto;
+}
+
+.navbar a {
+    color: #72383D;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    border: 1px solid #72383D;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #72383D;
+}
+
+.login-button:hover {
+    background-color: #72383D;
+    color: #F9F6F2;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #BFD7B5;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.welcome-section h2 {
+    font-size: 44px;
+    color: #72383D;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #72383D;
+    display: inline-block;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    color: #333;
+}
+
+.join-button {
+    background-color: #72383D;
+    color: #F9F6F2;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.join-button:hover {
+    background-color: #9CABB4;
+    color: #F9F6F2;
+}
+
+.navigation-buttons {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-button {
+    background-color: #A2C4D9;
+    color: #72383D;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #9CABB4;
+    color: #F9F6F2;
+}
+
+.about-section, .how-it-works-section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-section h3, .how-it-works-section h3 {
+    font-size: 36px;
+    color: #72383D;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #72383D;
+    display: inline-block;
+}
+
+.about-section p, .how-it-works-section p {
+    font-size: 18px;
+    color: #333;
+}
+
+.how-it-works-section {
+    margin-top: 50px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.step {
+    flex-basis: 23%;
+    text-align: center;
+}
+
+.step-number {
+    background-color: #A2C4D9;
+    color: white;
+    font-size: 20px;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.step-content {
+    background-color: #F9F6F2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.step-content h4 {
+    color: #72383D;
+}
+
+.step-content p {
+    color: #3E3E3E;
+}
