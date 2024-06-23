@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Heebo, sans-serif;
+    background-color: #E5EFE1;
+}
+
+.container {
+    margin-top: 100px;
+    padding: 20px;
+    width: 100%;
+}
+
+.request-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: Heebo, sans-serif;
+
+}
+
+h1 {
+    font-size: 50px;
+    margin-left: 10px;
+}
+
+.filters {
+    font-family: Heebo, sans-serif;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filters select,
+.filters input[type="text"],
+.filters button {
+    font-family: Heebo, sans-serif;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.filters select {
+    width: 150px;
+}
+
+.separator {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.request-table-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.request-table-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.request-table-column {
+    width: 14.2%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.history-container {
+    background-color: #E5EFE1;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+.history-item:nth-child(even) {
+    background-color: #E5EFE1;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.history-item div {
+    width: 14.2%; /* Adjust column width */
+    padding: 0 10px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+.sort-icon {
+    cursor: pointer;
+}
+
+.history-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.flatpickr-calendar {
+    z-index: 9999; /* Ensure calendar appears on top */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .filters select,
+    .filters input[type="text"],
+    .filters button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .request-table-column {
+        width: auto; /* Adjust for responsiveness */
+    }
+
+    .history-item div {
+        width: auto; /* Adjust for responsiveness */
+    }
+}

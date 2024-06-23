@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Request History</title>
+    <link rel="stylesheet" href="Request History.css">
+    <link rel="stylesheet" href="Header.css">
+    <link rel="stylesheet" href="Footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="comuneedy">
+            <a href="Home Page.html">ComuNeedy</a>
+        </div>
+        <div class="navbar">
+            <a href="Profile Page.html">Profile</a>
+            <a href="Open Requests.html">Open Requests</a>
+            <a href="Request History.html">Request History</a>
+            <a href="Contact Methods.html">Contact Us</a>
+        </div>
+        <div><a href="Sign In Page.html" class="login-button">Login</a></div>
+    </div>
+
+    <div class="container">
+        <div class="request-history-header">
+            <h1>Request History</h1>
+            <div class="filters">
+                <select id="filterSelect">
+                    <option value="">-- Filter by Type --</option>
+                </select>
+                <input type="text" id="fromDateInput" class="date-picker" placeholder="From Date">
+                <input type="text" id="toDateInput" class="date-picker" placeholder="To Date">
+                <button id="filterButton">Filter</button>
+                <button id="resetButton">Reset</button>
+            </div>
+        </div>
+
+        <hr class="separator">
+        <div class="request-table-container">
+            <div class="request-table-header">
+                <div class="request-table-column">#ID</div>
+                <div class="request-table-column">Title</div>
+                <div class="request-table-column">Requester Name</div>
+                <div class="request-table-column">Type of Request</div>
+                <div class="request-table-column">Completion Date <span id="sortIcon" class="sort-icon">▼</span></div>
+                <div class="request-table-column">Volunteer Assigned</div>
+                <div class="request-table-column">Details</div>
+            </div>
+            <div class="history-container" id="history-container">
+                <!-- History items will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-left">
+            <div class="footer-title">ComuNeedy</div>
+            <div class="footer-slogan">Stay in touch, we are here for you</div>
+        </div>
+        <div class="footer-right">
+            <div class="contact-method">
+                <div class="contact-item">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com" target="_blank"><img src="facebook icon.png" alt="Facebook" class="social-icon"></a>
+                        <a href="https://www.instagram.com" target="_blank"><img src="instagram icon.png" alt="Instagram" class="social-icon"></a>
+                        <a href="https://www.linkedin.com" target="_blank"><img src="linkdin icon.png" alt="LinkedIn" class="social-icon"></a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <p><strong>Phone:</strong> +1-800-123-4567</p>
+                </div>
+                <div class="contact-item">
+                    <p><strong>Email:</strong> <a href="mailto:support@comuneedy.com" class="contact-link">support@comuneedy.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Linking Flatpickr JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="Request History.js"></script>
+
+</body>
+
+</html>
