@@ -1,22 +1,19 @@
 body {
     background-color: #F9F6F2;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: Heebo, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-}
-
-.comuneedy {
-    color: #72383D;
-    font-size: 40px;
-    font-family: "Bell MT", serif;
-    position: absolute;
-    top: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 .container {
     max-width: 800px;
-    margin: 100px auto 50px; /* Adjusted margin to lower the container */
+    margin-top: 150px;
+    margin-bottom: 150px;
     padding: 20px;
     background-color: #BFD7B5;
     border-radius: 10px;
@@ -29,11 +26,12 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    font-family: Heebo, sans-serif;
 }
 
 .profile-picture {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin-right: 20px;
 }
 
@@ -44,16 +42,16 @@ body {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 45px;
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .profile-section {
     text-align: left;
-    margin-left: 120px; /* Align with the header */
+    margin-top: 50px;
 }
 
 .personal-info {
@@ -67,7 +65,7 @@ h2 {
 
 .personal-info p {
     font-size: 18px;
-    margin: 5px 0;
+    margin: 20px 0;
 }
 
 button {
@@ -79,25 +77,95 @@ button {
     cursor: pointer;
     font-size: 16px;
     margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #9CABB4;
+    background-color: #A2C4D9;
 }
 
-.back-button {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    text-align: center;
+/* Large desktop screens */
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1000px;
+        padding: 40px;
+    }
+    .profile-header {
+        margin-bottom: 40px;
+    }
+    h1 {
+        font-size: 55px;
+    }
+    h2 {
+        font-size: 32px;
+    }
 }
 
-.back-button img {
-    width: 50px;
-    height: auto;
+/* Laptops */
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+    .container {
+        max-width: 1000px;
+        padding: 40px;
+        overflow-y: auto;
+    }
+    .profile-header {
+        margin-bottom: 40px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 30px;
+    }
 }
 
-.back-button p {
-    font-size: 16px;
-    margin-top: 5px;
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 700px;
+        padding: 25px;
+        overflow-y: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .profile-header {
+        margin-bottom: 25px;
+    }
+    h1 {
+        font-size: 45px;
+    }
+    h2 {
+        font-size: 28px;
+    }
 }
+
+/* Mobile phones */
+@media only screen and (max-width: 767px) {
+    .container {
+        max-width: 100%;
+        padding: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        overflow-y: auto;
+    }
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .profile-picture {
+        margin-bottom: 10px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .personal-info p {
+        font-size: 16px;
+        margin: 15px 0;
+    }
+}
+

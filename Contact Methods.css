@@ -1,17 +1,9 @@
 body {
     background-color: #F9F6F2;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Heebo', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-}
-
-.comuneedy {
-    color: #72383D;
-    font-size: 40px;
-    font-family: "Bell MT", serif;
-    position: absolute;
-    top: auto;
 }
 
 .container {
@@ -19,20 +11,19 @@ body {
     justify-content: space-between;
     width: 100%;
     padding: 20px;
-    margin-top: 50px; /* Added margin to lower the container */
+    margin-top: 50px;
 }
 
-.contact-methods, .send-message {
+.contact-methods-main, .send-message {
     background-color: #F9F6F2;
-    /*border: 1px solid black;*/
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 20px;
-    width: 45%; /* Adjust width as needed */
-    margin-top: 20px; /* Added margin to separate the containers */
+    width: 45%;
+    margin-top: 50px;
 }
 
-.header {
+.contact-header {
     text-align: left;
     margin-bottom: 20px;
 }
@@ -42,7 +33,7 @@ h2 {
     color: #72383D;
 }
 
-.contact-item {
+.contact-item-main {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -55,12 +46,21 @@ h2 {
     margin-right: 20px;
 }
 
+.contact-link-main {
+    color: black;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
 .social-links {
     display: flex;
     gap: 10px;
 }
 
-.social-icon {
+.social-icon-main {
     width: 40px;
     height: auto;
 }
@@ -107,3 +107,62 @@ button {
 button:hover {
     background-color: #9CABB4;
 }
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.input-error {
+    border-color: red;
+}
+
+/* Large desktop screens */
+@media only screen and (min-width: 1200px) {
+    .container {
+        padding: 20px 100px;
+    }
+    .contact-methods-main, .send-message {
+        width: 45%;
+    }
+}
+
+/* Laptops */
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+    .container {
+        padding: 20px 50px;
+    }
+    .contact-methods-main, .send-message {
+        width: 50%;
+    }
+}
+
+/* Tablets*/
+@media only screen and (min-width: 480px) and (max-width: 1023px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .contact-methods-main, .send-message {
+        width: 90%;
+    }
+}
+
+/* Mobile phones */
+@media only screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .contact-methods-main, .send-message {
+        width: 90%;
+    }
+    h2, h3 {
+        font-size: 32px;
+    }
+    .contact-item-main {
+        font-size: 18px;
+    }
+}
+

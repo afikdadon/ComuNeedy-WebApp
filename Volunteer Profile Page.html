@@ -1,10 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Volunteer Profile</title>
+    <link rel="stylesheet" href="Volunteer Profile Page.css">
+    <link rel="stylesheet" href="Header.css">
+    <link rel="stylesheet" href="Footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-$END$
+
+<div class="header">
+    <div class="comuneedy">
+        <a href="Home Page.html">ComuNeedy</a>
+    </div>
+    <div class="navbar">
+        <a href="Profile Page.html">Profile</a>
+        <a href="My Requests.html">My Requests</a>
+        <a href="Volunteers List.html">Volunteers</a>
+        <a href="Contact Methods.html">Contact Us</a>
+    </div>
+    <div><a href="Sign In Page.html" class="login-button">Login</a></div>
+</div>
+
+<div class="container">
+    <div class="grid-container">
+        <div class="frame personal-details">
+            <h2>Personal Details</h2>
+            <div class="personal-info">
+                <p><strong>First Name:</strong> <span id="firstName"></span></p>
+                <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+                <p><strong>Gender:</strong> <span id="gender"></span></p>
+                <p><strong>Date of Birth:</strong> <span id="dob"></span></p>
+                <p><strong>Age:</strong> <span id="age"></span></p>
+                <p><strong>Languages:</strong> <span id="languages"></span></p>
+            </div>
+        </div>
+        <div class="frame service-details">
+            <h2>Service Details</h2>
+            <div class="service-info">
+                <p><strong>Type of Service:</strong> <span id="serviceType"></span></p>
+                <p><strong>Service Area:</strong> <span id="serviceArea"></span></p>
+            </div>
+        </div>
+        <div class="frame full-width-frame reviews-ratings">
+            <h2>Reviews & Ratings</h2>
+            <div class="average-rating">
+                <div class="star-ratings-css">
+                    <div class="star-ratings-css-bottom" id="averageStarRating">
+                        <!-- Stars will be dynamically generated here -->
+                    </div>
+                    <strong class="rating-value" id="averageRatingValue"></strong>
+                </div>
+                <p id="totalReviews">(0 reviews)</p>
+            </div>
+            <div class="reviews" id="reviewsList">
+                <!-- Reviews will be dynamically populated here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footer-left">
+        <div class="footer-title">ComuNeedy</div>
+        <div class="footer-slogan">Stay in touch, we are here for you</div>
+    </div>
+    <div class="footer-right">
+        <div class="contact-method">
+            <div class="contact-item">
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank"><img src="facebook icon.png" alt="Facebook" class="social-icon"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="instagram icon.png" alt="Instagram" class="social-icon"></a>
+                    <a href="https://www.linkedin.com" target="_blank"><img src="linkdin icon.png" alt="LinkedIn" class="social-icon"></a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <p><strong>Phone:</strong> +1-800-123-4567</p>
+            </div>
+            <div class="contact-item">
+                <p><strong>Email:</strong> <a href="mailto:support@comuneedy.com" class="contact-link">support@comuneedy.com</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="Volunteer Profile Page.js"></script>
+
 </body>
 </html>

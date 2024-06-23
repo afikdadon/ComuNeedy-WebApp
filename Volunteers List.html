@@ -1,10 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>List of Volunteers</title>
+    <link rel="stylesheet" href="Volunteers List.css">
+    <link rel="stylesheet" href="Header.css">
+    <link rel="stylesheet" href="Footer.css">
 </head>
+
 <body>
-$END$
+
+<div class="header">
+    <div class="comuneedy">
+        <a href="Home Page.html">ComuNeedy</a>
+    </div>
+    <div class="navbar">
+        <a href="Profile Page.html">Profile</a>
+        <a href="My Requests.html">My Requests</a>
+        <a href="Volunteers List.html">Volunteers</a>
+        <a href="Contact Methods.html">Contact Us</a>
+    </div>
+    <div><a href="Sign In Page.html" class="login-button">Login</a></div>
+</div>
+
+<div class="main-content">
+    <div class="volunteers-header">
+        <h1>Our Volunteers</h1>
+        <div class="filters">
+            <label for="languageFilter">Filter by Language:</label>
+            <select id="languageFilter">
+                <option value="">All</option>
+            </select>
+
+            <label for="areaFilter">Filter by Area:</label>
+            <select id="areaFilter">
+                <option value="">All</option>
+            </select>
+
+            <label for="sortFilter">Sort by:</label>
+            <select id="sortFilter">
+                <option value="alphabetical">Alphabetical</option>
+                <option value="rating-desc">Rating (High to Low)</option>
+                <option value="rating-asc">Rating (Low to High)</option>
+            </select>
+        </div>
+    </div>
+
+    <hr class="separator">
+
+    <div class="volunteer-table-container">
+        <div class="volunteer-table-header">
+            <div class="volunteer-table-column">Full Name</div>
+            <div class="volunteer-table-column">Language</div>
+            <div class="volunteer-table-column">Area</div>
+            <div class="volunteer-table-column">Average Rating</div>
+            <div class="volunteer-table-column">Details</div>
+        </div>
+        <div class="volunteer-list" id="volunteerList">
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <div class="footer-title">ComuNeedy</div>
+            <div class="footer-slogan">Stay in touch, we are here for you</div>
+        </div>
+        <div class="footer-right">
+            <div class="contact-method">
+                <div class="contact-item">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com" target="_blank"><img src="facebook icon.png" alt="Facebook" class="social-icon"></a>
+                        <a href="https://www.instagram.com" target="_blank"><img src="instagram icon.png" alt="Instagram" class="social-icon"></a>
+                        <a href="https://www.linkedin.com" target="_blank"><img src="linkdin icon.png" alt="LinkedIn" class="social-icon"></a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <p><strong>Phone:</strong> +1-800-123-4567</p>
+                </div>
+                <div class="contact-item">
+                    <p><strong>Email:</strong> <a href="mailto:support@comuneedy.com" class="contact-link">support@comuneedy.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="Volunteers List.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,146 @@
+/* General body styling */
+body {
+    background-color: #F9F6F2;
+    font-family: 'Heebo', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container for the main content */
+.container {
+    width: 100%;
+    margin: 100px auto 30px;
+    padding: 20px;
+    background-color: #F9F6F2;
+    flex: 1;
+}
+
+/* Grid container for layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    grid-gap: 20px; /* Gap between grid items */
+}
+
+/* Styling for each section/frame */
+.frame {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.full-width-frame {
+    grid-column: span 2;
+}
+
+/* Heading style */
+h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 45px;
+    color: black;
+}
+
+/* Personal and service info grid */
+.personal-info, .service-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.personal-info p, .service-info p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* Average rating and reviews sections */
+.average-rating, .reviews {
+    flex: 1;
+    font-size: 20px;
+}
+
+/* Styling for star ratings */
+.star-ratings-css {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+.star-ratings-css .rating-value {
+    color: black;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.star-ratings-css-bottom {
+    display: flex;
+    align-items: center;
+    color: #f39c12;
+    font-size: 30px;
+}
+
+.review p.service-provided {
+    content: "Service Provided: ";
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.review {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Large Screens (Desktops) */
+@media (min-width: 1025px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width-frame {
+        grid-column: span 1;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width-frame {
+        grid-column: span 1;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    .personal-info p, .service-info p {
+        font-size: 18px;
+    }
+
+    .star-ratings-css, .star-ratings-css-bottom {
+        font-size: 25px;
+    }
+}

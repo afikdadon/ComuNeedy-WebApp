@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Request History</title>
-    <link rel="stylesheet" href="Request History.css">
+    <title>My Request</title>
+    <link rel="stylesheet" href="My Requests.css">
     <link rel="stylesheet" href="Header.css">
     <link rel="stylesheet" href="Footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -18,19 +18,29 @@
         </div>
         <div class="navbar">
             <a href="Profile Page.html">Profile</a>
-            <a href="Open Requests.html">Open Requests</a>
-            <a href="Request History.html">Request History</a>
+            <a href="My Requests.html">My Requests</a>
+            <a href="Volunteers List.html">Volunteers</a>
             <a href="Contact Methods.html">Contact Us</a>
         </div>
         <div><a href="Sign In Page.html" class="login-button">Login</a></div>
     </div>
 
     <div class="container">
-        <div class="request-history-header">
-            <h1>Request History</h1>
+
+        <div class="new-request-bar">
+        <a href="New Request Page.html" class="new-request-link">
+            <button class="plus-button">+</button> Open a New Request
+        </a>
+        </div>
+
+        <div class="request-header">
+            <h1>My Requests</h1>
             <div class="filters">
-                <select id="filterSelect">
+                <select id="typeFilterSelect">
                     <option value="">-- Filter by Type --</option>
+                </select>
+                <select id="statusFilterSelect">
+                    <option value="">-- Filter by Status --</option>
                 </select>
                 <input type="text" id="fromDateInput" class="date-picker" placeholder="From Date">
                 <input type="text" id="toDateInput" class="date-picker" placeholder="To Date">
@@ -48,10 +58,11 @@
                 <div class="request-table-column">Type of Request</div>
                 <div class="request-table-column">Completion Date <span id="sortIcon" class="sort-icon">▼</span></div>
                 <div class="request-table-column">Volunteer Assigned</div>
+                <div class="request-table-column">Status</div>
                 <div class="request-table-column">Details</div>
             </div>
-            <div class="history-container" id="history-container">
-                <!-- History items will be dynamically added here -->
+            <div class="request-container" id="request-container">
+                <!-- request items will be dynamically added here -->
             </div>
         </div>
     </div>
@@ -82,7 +93,7 @@
 
     <!-- Linking Flatpickr JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="Request History.js"></script>
+    <script src="My Requests.js"></script>
 
 </body>
 

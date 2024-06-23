@@ -1,34 +1,48 @@
 body {
     background-color: #F9F6F2;
-    font-family: 'Segoe UI', serif;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    height: 100vh;
+    padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-.container {
+.header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    height: 100%;
-    margin-top: 40px;
+    align-items: center;
+    padding: 20px;
+    background-color: #A2C4D9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-.left-section {
-    background-color: #A2C4D9;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 50%;
+.comuneedy {
+    color: #72383D;
+    font-size: 40px;
+    font-family: "Bell MT", serif;
+}
+
+.comuneedy a {
+    color: #72383D;
+    text-decoration: none;
+}
+
+.sign-in {
+    padding: 70px;
+    width: 30%;
     text-align: center;
     margin-bottom: 60px;
+    margin-top: 150px;
 }
 
-.left-section img {
+.sign-in img {
     max-width: 100px;
-    margin-bottom: 20px;
 }
 
 h1 {
@@ -44,7 +58,7 @@ h2 {
 }
 
 form {
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .input-container {
@@ -54,6 +68,7 @@ form {
 
 label {
     display: block;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -61,7 +76,7 @@ input {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #BFD7B5;
+    border: 1px solid grey;
 }
 
 .forgot-password {
@@ -69,29 +84,68 @@ input {
     color: #72383D;
     font-size: 16px;
     display: block;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 button {
+    margin-top: 40px;
     background-color: #72383D;
-    color: white;
+    color: #F9F6F2;
     border: none;
-    padding: 15px 25px;
     border-radius: 5px;
+    padding: 15px 25px;
     cursor: pointer;
     font-size: 18px;
 }
 
 button:hover {
-    background-color: #BFD7B5;
+    background-color: #F9F6F2;
+    color:  #72383D;
+    border: 1px solid #72383D;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-.comuneedy {
-    color: #72383D;
-    font-size: 80px;
-    font-family: "Bell MT", serif;
-    position: absolute;
-    right: 160px;
-    top: 50%;
-    transform: translateY(-50%);
+.create-account {
+    margin-top: 30px;
 }
+
+.create-account p {
+    font-size: 16px;
+}
+
+.create-account a {
+    color: #72383D;
+    text-decoration: none;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+/* Tablets and larger screens */
+@media only screen and (min-width: 768px) {
+    .sign-in {
+        width: 50%;
+        padding: 50px;
+        margin-top: 200px;
+    }
+}
+
+/* Mobile phones */
+@media only screen and (max-width: 767px) {
+    .sign-in {
+        width: 90%;
+        padding: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        overflow-y: auto;
+    }
+     .header {
+        position: static;
+    }
+    .footer {
+        position: static;
+    }
+}
+

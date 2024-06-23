@@ -1,0 +1,137 @@
+body {
+    background-color: #F9F6F2;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Use min-height to ensure body expands if content exceeds viewport */
+}
+
+.container {
+    max-width: 800px;
+    margin: 200px auto 100px; /* Adjusted top and bottom margins */
+    padding: 50px;
+    background-color: #BFD7B5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-container label {
+    font-weight: bold;
+    font-family: Heebo, sans-serif;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.input-container input {
+    background-color: #BFD7B5;
+    font-family: Heebo, sans-serif;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #72383D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #A2C4D9;
+}
+
+.loading-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+.loading-circle {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #72383D;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px auto;
+    display: none;
+}
+
+.spin {
+    display: block;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.status-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px auto;
+    display: none;
+}
+
+#loadingMessage {
+    font-size: 18px;
+    color: #333;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        margin: 80px;
+        padding: 30px;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        margin: 40px ;
+        padding: 20px;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 20px ;
+        padding: 15px;
+        overflow-y: auto;
+    }
+}
