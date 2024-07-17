@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Service Feedback{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='Service Request Page.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="content">
+        <div class="service-header">
+            <img src="{{ url_for('static', filename='note icon.png') }}" alt="note Icon" class="note-icon">
+            <h1 id="serviceFeedbackHeading">Service Feedback</h1>
+        </div>
+        <p>Thank you for using our service! We'd love to hear your feedback.</p>
+        <p>Please provide your feedback below</p>
+        <form id="feedbackForm">
+            <div class="volunteer-details">
+                <p><strong>Volunteer - </strong> <span id="volunteer-name">{{ volunteer_name }}</span></p>
+            </div>
+            <div class="input-container">
+                <label for="star-rating">Star Rating</label>
+                <div class="star-rating" id="star-rating">
+                    <span class="star" data-rating="1">&#9733;</span>
+                    <span class="star" data-rating="2">&#9733;</span>
+                    <span class="star" data-rating="3">&#9733;</span>
+                    <span class="star" data-rating="4">&#9733;</span>
+                    <span class="star" data-rating="5">&#9733;</span>
+                </div>
+                <input type="hidden" name="rating" id="rating">
+            </div>
+            <div class="input-container">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="input-container">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="input-container">
+                <label for="description">Description</label>
+                <textarea id="description" name="description"></textarea>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ url_for('static', filename='Service Request Page.js') }}"></script>
+{% endblock %}

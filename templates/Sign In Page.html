@@ -1,0 +1,40 @@
+<!-- Sign In Page.html -->
+{% extends 'base.html' %}
+
+
+{% block title %}Sign In{% endblock %}
+
+
+{% block css %}
+   <link rel="stylesheet" href="{{ url_for('static', filename='Sign In Page.css') }}">
+{% endblock %}
+
+
+{% block content %}
+   <div class="sign-in">
+       <img src="{{ url_for('static', filename='open door.png') }}" alt="Door Logo">
+       <h1>Welcome back!</h1>
+       <h2>Please enter your details</h2>
+       <form id="signInForm">
+           <div class="input-container">
+               <label for="email">Email</label>
+               <input type="email" id="email" name="email" required>
+           </div>
+           <div class="input-container">
+               <label for="password">Password</label>
+               <input type="password" id="password" name="password" required>
+               <a href="{{ url_for('forgot_password') }}" class="forgot-password">Forgot password?</a>
+           </div>
+           <button type="submit">Login</button>
+       </form>
+       <div class="create-account">
+           <p>Don't have an account? <a href="{{ url_for('register_page') }}">Create an account</a></p>
+       </div>
+   </div>
+{% endblock %}
+
+
+{% block javascripts %}
+   <script src="{{ url_for('static', filename='Sign In Page.js') }}"></script>
+{% endblock %}
+

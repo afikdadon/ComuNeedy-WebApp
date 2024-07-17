@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}My Requests{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="static/My Requests.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+
+        <div class="new-request-bar">
+            <a href='/new-request' class="new-request-link">
+                <button class="plus-button">+</button> Open a New Request
+            </a>
+        </div>
+
+        <div class="request-header">
+            <h1>My Requests</h1>
+            <div class="filters">
+                <select id="typeFilterSelect">
+                    <option value="">-- Filter by Type --</option>
+                </select>
+                <select id="statusFilterSelect">
+                    <option value="">-- Filter by Status --</option>
+                </select>
+                <input type="text" id="fromDateInput" class="date-picker" placeholder="From Date">
+                <input type="text" id="toDateInput" class="date-picker" placeholder="To Date">
+                <button id="filterButton">Filter</button>
+                <button id="resetButton">Reset</button>
+            </div>
+        </div>
+
+        <hr class="separator">
+        <div class="request-table-container">
+            <div class="request-table-header">
+                <div class="request-table-column">#ID</div>
+                <div class="request-table-column">Title</div>
+                <div class="request-table-column">Requester Name</div>
+                <div class="request-table-column">Type of Request</div>
+                <div class="request-table-column">Completion Date <span id="sortIcon" class="sort-icon">▼</span></div>
+                <div class="request-table-column">Volunteer Assigned</div>
+                <div class="request-table-column">Status</div>
+                <div class="request-table-column">Details</div>
+            </div>
+            <div id="request-container">
+                <!-- request items will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="static/My Requests.js"></script>
+{% endblock %}

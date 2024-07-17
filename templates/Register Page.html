@@ -1,0 +1,62 @@
+<!-- Register Page.html -->
+{% extends 'base.html' %}
+
+
+{% block title %}Register{% endblock %}
+
+
+{% block css %}
+   <link rel="stylesheet" href="{{ url_for('static', filename='Register Page.css') }}">
+{% endblock %}
+
+
+{% block content %}
+   <!-- Registration form -->
+   <div class="container">
+       <div class="left-section">
+           <h1>Create New Account</h1>
+           <h2>Join a Community That Feels Like Family</h2>
+           <form id="registerForm">
+               <div class="input-container">
+                   <label for="first-name">First Name</label>
+                   <input type="text" id="first-name" name="first-name">
+               </div>
+               <div class="input-container">
+                   <label for="last-name">Last Name</label>
+                   <input type="text" id="last-name" name="last-name">
+               </div>
+               <div class="input-container">
+                   <label for="email">Email</label>
+                   <input type="email" id="email" name="email">
+               </div>
+               <div class="input-container">
+                   <label for="phone">Phone Number</label>
+                   <input type="tel" id="phone" name="phone">
+               </div>
+               <div class="input-container">
+                   <label for="password">Password</label>
+                   <input type="password" id="password" name="password">
+               </div>
+               <div class="input-container">
+                   <label for="confirm-password">Confirm Password</label>
+                   <input type="password" id="confirm-password" name="confirm-password">
+               </div>
+               <button type="submit">Register</button>
+           </form>
+       </div>
+   </div>
+
+
+   <!-- New loading container -->
+   <div id="loadingContainer" style="display: none;">
+       <div class="loading-circle"></div>
+       <p id="loadingMessage"></p>
+       <img id="statusIcon" style="display: none;" alt="Status">
+   </div>
+{% endblock %}
+
+
+{% block javascripts %}
+   <script src="{{ url_for('static', filename='Register Page.js') }}"></script>
+{% endblock %}
+
