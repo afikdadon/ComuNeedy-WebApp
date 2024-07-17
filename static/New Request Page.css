@@ -1,0 +1,185 @@
+body {
+    background-color: #BFD7B5;
+    font-family: 'Heebo', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 80px 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.content {
+    background-color: #F9F6F2;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.input-container {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-container p{
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select,
+input[type="date"] {
+    width: calc(100% - 20px);
+    border: none;
+    background: #F9F6F2;
+    border-bottom: 3px solid black;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+button {
+    background-color: #72383D;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #9CABB4;
+}
+
+.home-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+}
+
+.home-button img {
+    width: 50px;
+    height: auto;
+}
+
+/* Large desktop screens */
+@media only screen and (min-width: 1200px) {
+    .container {
+        padding: 80px 100px;
+    }
+}
+
+/* Laptops */
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+    .container {
+        padding: 80px 50px;
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        padding: 80px 20px;
+    }
+}
+
+/* Mobile phones */
+@media only screen and (max-width: 767px) {
+    .container {
+        padding: 60px 10px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .input-container {
+        margin-bottom: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select,
+    input[type="date"] {
+        padding: 8px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+
+/* Smaller screens */
+@media only screen and (max-width: 480px) {
+    .container {
+        padding: 40px 10px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .input-container {
+        margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select,
+    input[type="date"] {
+        padding: 6px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+

@@ -1,0 +1,189 @@
+body {
+   background-color: #F9F6F2;
+   font-family: Heebo, sans-serif;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+}
+
+
+.container {
+   max-width: 800px;
+   margin-top: 150px;
+   margin-bottom: 150px;
+   padding: 20px;
+   background-color: #BFD7B5;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   position: relative;
+   flex: 1;
+}
+
+
+.profile-header {
+   display: flex;
+   align-items: center;
+   margin-bottom: 20px;
+   font-family: Heebo, sans-serif;
+}
+
+
+.profile-picture {
+   width: 80px;
+   height: 80px;
+   margin-right: 20px;
+}
+
+
+.profile-picture img {
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+}
+
+
+h1 {
+   font-size: 45px;
+}
+
+
+h2 {
+   font-size: 28px;
+}
+
+
+.profile-section {
+   text-align: left;
+   margin-top: 50px;
+}
+
+
+.personal-info {
+   text-align: left;
+}
+
+
+.personal-info h2 {
+   font-size: 24px;
+   margin-bottom: 10px;
+}
+
+
+.personal-info p {
+   font-size: 18px;
+   margin: 20px 0;
+}
+
+
+button {
+   background-color: #72383D;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+   margin-top: 20px;
+   transition: background-color 0.3s ease;
+}
+
+
+button:hover {
+   background-color: #A2C4D9;
+}
+
+
+/* Large desktop screens */
+@media only screen and (min-width: 1200px) {
+   .container {
+       max-width: 1000px;
+       padding: 40px;
+   }
+   .profile-header {
+       margin-bottom: 40px;
+   }
+   h1 {
+       font-size: 55px;
+   }
+   h2 {
+       font-size: 32px;
+   }
+}
+
+
+/* Laptops */
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+   .container {
+       max-width: 1000px;
+       padding: 40px;
+       overflow-y: auto;
+   }
+   .profile-header {
+       margin-bottom: 40px;
+   }
+   h1 {
+       font-size: 50px;
+   }
+   h2 {
+       font-size: 30px;
+   }
+}
+
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+   .container {
+       max-width: 700px;
+       padding: 25px;
+       overflow-y: auto;
+       margin-top: 10px;
+       margin-bottom: 10px;
+   }
+   .profile-header {
+       margin-bottom: 25px;
+   }
+   h1 {
+       font-size: 45px;
+   }
+   h2 {
+       font-size: 28px;
+   }
+}
+
+
+/* Mobile phones */
+@media only screen and (max-width: 767px) {
+   .container {
+       max-width: 100%;
+       padding: 20px;
+       margin-top: 10px;
+       margin-bottom: 10px;
+       overflow-y: auto;
+   }
+   .profile-header {
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+       margin-bottom: 20px;
+   }
+   .profile-picture {
+       margin-bottom: 10px;
+   }
+   h1 {
+       font-size: 35px;
+   }
+   h2 {
+       font-size: 24px;
+   }
+   .personal-info p {
+       font-size: 16px;
+       margin: 15px 0;
+   }
+}
+
+
+
