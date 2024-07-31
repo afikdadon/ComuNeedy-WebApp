@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Contact Us{% endblock %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('contactMethods.static', filename='css/Contact_Methods.css') }}">
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+   <div class="contact-methods-main">
+       <div class="contact-header">
+           <h2>Contact Us</h2>
+       </div>
+       <div class="contact-item-main">
+           <img src="{{ url_for('static', filename='media/img/phone icon.png') }}" alt="Phone Icon" class="contact-icon">
+           <p><strong>Phone:</strong> +1-800-123-4567</p>
+       </div>
+       <div class="contact-item-main">
+           <img src="{{ url_for('static', filename='media/img/email icon.png') }}" alt="Email Icon" class="contact-icon">
+           <p><strong>Email:</strong> <a href="mailto:support@comuneedy.com" class="contact-link-main">support@comuneedy.com</a></p>
+       </div>
+       <div class="contact-item-main">
+           <p><strong>Follow Us:</strong></p>
+           <div class="social-links">
+               <a href="https://www.facebook.com" target="_blank"><img src="{{ url_for('static', filename='media/img/facebook icon.png') }}" alt="Facebook" class="social-icon-main"></a>
+               <a href="https://www.instagram.com" target="_blank"><img src="{{ url_for('static', filename='media/img/instagram icon.png') }}" alt="Instagram" class="social-icon-main"></a>
+               <a href="https://www.linkedin.com" target="_blank"><img src="{{ url_for('static', filename='media/img/linkdin icon.png') }}" alt="LinkedIn" class="social-icon-main"></a>
+           </div>
+       </div>
+   </div>
+   <div class="send-message">
+       <h3>Send Us a Message</h3>
+       <form>
+           <div class="input-container">
+               <label for="name">Name:</label>
+               <input type="text" id="name" name="name" placeholder="Enter your name">
+           </div>
+           <div class="input-container">
+               <label for="email">Email:</label>
+               <input type="email" id="email" name="email" placeholder="Enter your email">
+           </div>
+           <div class="input-container">
+               <label for="message">Message:</label>
+               <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+           </div>
+           <button type="submit">Send Message</button>
+       </form>
+   </div>
+</div>
+{% endblock %}
+
+
+{% block javascripts %}
+<script src="{{ url_for('contactMethods.static', filename='js/Contact_Methods.js') }}"></script>
+{% endblock %}
+

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Profile{% endblock %}
+
+{% block css %}
+   <link rel="stylesheet" href="{{ url_for('profileEditing.static', filename='css/Profile_Editing_Page.css') }}">
+{% endblock %}
+
+{% block content %}
+   <div class="container">
+       <h1>Edit Profile</h1>
+       <form id="editProfileForm">
+           <div class="input-container">
+               <label for="firstName">First Name</label>
+               <input type="text" id="firstName" name="firstName" value="{{ user.firstName }}" required>
+           </div>
+           <div class="input-container">
+               <label for="lastName">Last Name</label>
+               <input type="text" id="lastName" name="lastName" value="{{ user.lastName }}" required>
+           </div>
+           <div class="input-container">
+               <label for="email">Email</label>
+               <input type="email" id="email" name="email" value="{{ user.email }}" required>
+           </div>
+           <div class="input-container">
+               <label for="phone">Phone Number</label>
+               <input type="tel" id="phone" name="phone" value="{{ user.phoneNumber }}" pattern="[0-9]{10}" required>
+           </div>
+           <button type="submit">Save Changes</button>
+       </form>
+   </div>
+
+   <div id="loadingContainer" class="loading-container">
+       <img id="statusIcon" src="" alt="Status Icon" class="status-icon">
+       <div class="loading-circle"></div>
+       <p id="loadingMessage"></p>
+   </div>
+{% endblock %}
+
+{% block javascripts %}
+   <script src="{{ url_for('profileEditing.static', filename='js/Profile_Editing_Page.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}Service Feedback{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('serviceFeedback.static', filename='css/Service_Feedback_Page.css') }}">
+<style>
+    .star-rating {
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .star-rating .star {
+        color: #ccc;
+    }
+    .star-rating .star.active {
+        color: #ffcc00;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="content">
+        <div class="service-header">
+            <img src="{{ url_for('static', filename='media/img/note icon.png') }}" alt="Note Icon" class="note-icon">
+            <h1 id="serviceFeedbackHeading">Service Feedback</h1>
+        </div>
+        <p>Thank you for using our service! We'd love to hear your feedback.</p>
+        <p>Please provide your feedback below</p>
+        <form id="feedbackForm">
+            <!-- Hidden input field for request_id -->
+            <input type="hidden" id="requestId" value="{{ request_id }}">
+
+            <div class="input-container">
+                <label for="star-rating">Star Rating</label>
+                <div class="star-rating" id="starRating">
+                    <span class="star" data-rating="1">&#9733;</span>
+                    <span class="star" data-rating="2">&#9733;</span>
+                    <span class="star" data-rating="3">&#9733;</span>
+                    <span class="star" data-rating="4">&#9733;</span>
+                    <span class="star" data-rating="5">&#9733;</span>
+                </div>
+                <input type="hidden" name="rating" id="ratingInput" value="0">
+            </div>
+            <div class="input-container">
+                <label for="description">Description (optional)</label>
+                <textarea id="description" name="description" rows="4" cols="50"></textarea>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ url_for('serviceFeedback.static', filename='js/Service_Feedback_Page.js') }}"></script>
+{% endblock %}

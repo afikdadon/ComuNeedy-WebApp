@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='Header.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='Footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Footer.css') }}">
     {% block css %}{% endblock %}
 </head>
 <body>
     <!-- Header -->
-    <div class="header">
+     <div class="header">
         <div class="comuneedy">
             <a href="/">ComuNeedy</a>
         </div>
         <div class="navbar">
-            <a href="/profile">Profile</a>
-            <a href="/requests">My Requests</a>
-            <a href="/volunteers">Volunteers</a>
-            <a href="/contact">Contact Us</a>
+            {% if session.get('logged_in') %}
+                <a href="{{ url_for('profile.Profile_Page') }}">Profile</a>
+                <a href="{{ url_for('myRequests.my_requests') }}">My Requests</a>
+                <a href="/volunteers">Volunteers</a>
+                <a href="/contact">Contact Us</a>
+                <a href="{{ url_for('signIn.logout') }}" class="login-button">Logout</a>
+            {% else %}
+                <a href="/volunteers">Volunteers</a>
+                <a href="/contact">Contact Us</a>
+                <a href="{{ url_for('signIn.Sign_In_Page') }}" class="login-button">Login</a>
+            {% endif %}
         </div>
-        <div><a href="/signin" class="login-button">Login</a></div>
     </div>
 
     <!-- Content -->
@@ -37,9 +43,9 @@
             <div class="contact-method">
                 <div class="contact-item">
                     <div class="social-links">
-                        <a href="https://www.facebook.com" target="_blank"><img src="{{ url_for('static', filename='facebook icon.png') }}" alt="Facebook" class="social-icon"></a>
-                        <a href="https://www.instagram.com" target="_blank"><img src="{{ url_for('static', filename='instagram icon.png') }}" alt="Instagram" class="social-icon"></a>
-                        <a href="https://www.linkedin.com" target="_blank"><img src="{{ url_for('static', filename='linkdin icon.png') }}" alt="LinkedIn" class="social-icon"></a>
+                        <a href="https://www.facebook.com" target="_blank"><img src="{{ url_for('static', filename='media/img/facebook icon.png') }}" alt="Facebook" class="social-icon"></a>
+                        <a href="https://www.instagram.com" target="_blank"><img src="{{ url_for('static', filename='media/img/instagram icon.png') }}" alt="Instagram" class="social-icon"></a>
+                        <a href="https://www.linkedin.com" target="_blank"><img src="{{ url_for('static', filename='media/img/linkdin icon.png') }}" alt="LinkedIn" class="social-icon"></a>
                     </div>
                 </div>
                 <div class="contact-item">

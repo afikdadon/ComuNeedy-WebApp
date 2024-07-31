@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}
+List of Volunteers
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('volunteersList.static', filename='css/Volunteers_List_Page.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="main-content">
+    <div class="volunteers-header">
+        <h1>Our Volunteers</h1>
+        <div class="filters">
+            <label for="languageFilter">Filter by Language:</label>
+            <select id="languageFilter">
+                <option value="">All</option>
+            </select>
+
+            <label for="areaFilter">Filter by Area:</label>
+            <select id="areaFilter">
+                <option value="">All</option>
+            </select>
+
+            <label for="sortFilter">Sort by:</label>
+            <select id="sortFilter">
+                <option value="alphabetical">Alphabetical</option>
+                <option value="rating-desc">Rating (High to Low)</option>
+                <option value="rating-asc">Rating (Low to High)</option>
+            </select>
+        </div>
+    </div>
+
+    <hr class="separator">
+
+    <div class="volunteer-table-container">
+        <div class="volunteer-table-header">
+            <div class="volunteer-table-column">Full Name</div>
+            <div class="volunteer-table-column">Language</div>
+            <div class="volunteer-table-column">Area</div>
+            <div class="volunteer-table-column">Average Rating</div>
+            <div class="volunteer-table-column">Details</div>
+        </div>
+        <div class="volunteer-list" id="volunteerList">
+            <!-- Your volunteer list content goes here -->
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+        // Pass the requests data to JavaScript
+        var volunteers = {{ volunteers|safe }};
+        console.log("Received volunteers:", volunteers);
+    </script>
+<script src="{{ url_for('volunteersList.static', filename='js/Volunteers_List_Page.js') }}"></script>
+{% endblock %}

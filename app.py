@@ -1,72 +1,61 @@
+# app.py
 from flask import Flask, render_template, request, redirect, url_for
+import logging
+logging.basicConfig(level=logging.INFO)
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'karinAndAfik'
 
-@app.route('/')
-def home_page():
-    return render_template('Home Page.html')
+from pages.contactMethods.Contact_Methods import Contact_Methods_bp
+app.register_blueprint(Contact_Methods_bp)
 
-@app.route('/contact')
-def contact_page():
-    return render_template('Contact Methods.html')
+from pages.forgotPassword.Forgot_Password_Page import Forgot_Password_bp
+app.register_blueprint(Forgot_Password_bp)
 
-@app.route('/requests')
-def my_requests():
-    return render_template('My Requests.html')
+from pages.homePage.Home_Page import Home_Page_bp
+app.register_blueprint(Home_Page_bp)
 
-@app.route('/request_details')
-def request_details():
-    request_id = request.args.get('id')
-    if request_id:
-        return render_template('Request Details.html', request_id=request_id)
-    else:
-        return "Request ID not provided", 400
+from pages.myRequests.My_Requests import My_Requests_bp
+app.register_blueprint(My_Requests_bp)
 
-# @app.route('/service_request')
-# def service_request():
-#     return render_template('Service Request Page.html')
+from pages.newRequest.New_Request import New_Request_bp
+app.register_blueprint(New_Request_bp)
 
-@app.route('/service_request')
-def service_request():
-    volunteer_name = request.args.get('volunteer')
-    request_id = request.args.get('request_id')
-    return render_template('Service Request Page.html', volunteer=volunteer_name, request_id=request_id)
 
-@app.route('/forgot-password')
-def forgot_password():
-    return render_template('Forgot Password Page.html')
+from pages.passwordReset.Password_Reset import Password_Reset_bp
+app.register_blueprint(Password_Reset_bp)
 
-@app.route('/password-reset')
-def password_reset():
-    return render_template('Password Reset Page.html')
 
-@app.route('/volunteers')
-def volunteers_list():
-    return render_template('Volunteers List.html')
+from pages.profileEditing.Profile_Editing import Profile_Editing_bp
+app.register_blueprint(Profile_Editing_bp)
 
-@app.route('/volunteer_profile')
-def volunteer_profile():
-    return render_template('Volunteer Profile Page.html')
 
-@app.route('/new-request')
-def new_request():
-    return render_template('New Request Page.html')
+from pages.profile.Profile import Profile_bp
+app.register_blueprint(Profile_bp)
 
-@app.route('/register')
-def register_page():
-    return render_template('Register Page.html')
 
-@app.route('/signin')
-def sign_in():
-    return render_template('Sign In Page.html')
+from pages.register.Register import Register_bp
+app.register_blueprint(Register_bp)
 
-@app.route('/profile')
-def profile_page():
-    return render_template('Profile Page.html')
 
-@app.route('/profile/edit')
-def profile_edit_page():
-    return render_template('Profile Editing Page.html')
+from pages.requestDetails.Request_Details import Request_Details_bp
+app.register_blueprint(Request_Details_bp)
+
+
+from pages.serviceFeedback.Service_Feedback import Service_Feedback_bp
+app.register_blueprint(Service_Feedback_bp)
+
+
+from pages.signIn.Sign_In import Sign_In_bp
+app.register_blueprint(Sign_In_bp)
+
+
+from pages.volunteerProfile.Volunteer_Profile import Volunteer_Profile_bp
+app.register_blueprint(Volunteer_Profile_bp)
+
+
+from pages.volunteersList.Volunteers_List import Volunteers_List_bp
+app.register_blueprint(Volunteers_List_bp)
 
 
 if __name__ == '__main__':

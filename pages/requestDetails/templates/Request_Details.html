@@ -1,0 +1,58 @@
+<!--Request_Details.html-->
+{% extends "base.html" %}
+
+{% block title %}Request Details{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('requestDetails.static', filename='css/Request_Details_Page.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 id="requestTitle">#{{ request_details.requestID }} {{ request_details.typeOfService }}</h1>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <strong class="category-title">Type of Request</strong>
+            <br>
+            <span class="detail-text" id="requestType">{{ request_details.typeOfService }}</span>
+        </div>
+        <div class="grid-item">
+            <strong class="category-title">Description</strong>
+            <br>
+            <span class="detail-text" id="requestDescription">{{ request_details.serviceDescription }}</span>
+        </div>
+        <div class="grid-item">
+            <strong class="category-title">Status</strong>
+            <br>
+            <span class="detail-text" id="requestStatus">{{ request_details.status }}</span>
+        </div>
+        <div class="grid-item">
+            <strong class="category-title">Date of Application</strong>
+            <br>
+            <span class="detail-text" id="applicationDate">{{ request_details.openDate }}</span>
+        </div>
+        <div class="grid-item">
+            <strong class="category-title">Volunteer Assigned</strong>
+            <br>
+            <span class="detail-text" id="volunteerAssigned">{{ request_details.selectedVolunteer }}</span>
+        </div>
+        <div class="grid-item">
+            <strong class="category-title">Completion Date</strong>
+            <br>
+            <span class="detail-text" id="completionDate">{{ request_details.completionDate }}</span>
+        </div>
+    </div>
+    <div id="reviewButtonContainer" class="review-button-container">
+        <button id="writeReviewButton" class="write-review-button" style="display: none;">Write a Review</button>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    var request = {{ request_details|tojson }};
+    console.log("Received request:", request);
+</script>
+<script src="{{ url_for('requestDetails.static', filename='js/Request_Details_Page.js') }}"></script>
+{% endblock %}
