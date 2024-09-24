@@ -12,7 +12,7 @@ ComuNeedy is a web application designed to connect volunteers with individuals s
 
 2. **Registration**
    - New users fill out a registration form with personal details and account credentials.
-   - **Action:** After registration, users are redirected to the Sign In page.
+   - **Action:** After registration, users are redirected to the Sign-In page.
 
 3. **Sign In**
    - Registered users enter their credentials to access their account.
