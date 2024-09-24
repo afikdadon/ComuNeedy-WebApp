@@ -1,0 +1,24 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+DEBUG:pymongo.connection:{"clientId": {"$oid": "66a936828ce64cc51e22dc5d"}, "message": "Connection pool ready", "serverHost": "ac-i5elyzx-shard-00-01.hduil2j.mongodb.net", "serverPort": 27017}
+DEBUG:pymongo.connection:{"clientId": {"$oid": "66a936828ce64cc51e22dc5d"}, "message": "Connection pool ready", "serverHost": "ac-i5elyzx-shard-00-00.hduil2j.mongodb.net", "serverPort": 27017}
+DEBUG:pymongo.connection:{"clientId": {"$oid": "66a936828ce64cc51e22dc5d"}, "message": "Connection pool ready", "serverHost": "ac-i5elyzx-shard-00-02.hduil2j.mongodb.net", "serverPort": 27017}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-676-387
+DEBUG:pymongo.connection:{"clientId": {"$oid": "66a93683c2371385b57f1d0e"}, "message": "Connection pool ready", "serverHost": "ac-i5elyzx-shard-00-00.hduil2j.mongodb.net", "serverPort": 27017}
+DEBUG:pymongo.connection:{"clientId": {"$oid": "66a93683c2371385b57f1d0e"}, "message": "Connection pool ready", "serverHost": "ac-i5elyzx-shard-00-02.hduil2j.mongodb.net", "serverPort": 27017}
+DEBUG:pymongo.connection:{"clientId": {"$oid": "66a93683c2371385b57f1d0e"}, "message": "Connection pool ready", "serverHost": "ac-i5elyzx-shard-00-01.hduil2j.mongodb.net", "serverPort": 27017}
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+DEBUG:pymongo.connection:{"clientId": {"$oid": "66a93693c78fca5fee087a13"}, "message": "Connection pool ready", "serverHost": "ac-i5elyzx-shard-00-01.hduil2j.mongodb.net", "serverPort": 27017}
+DEBUG:pymongo.connection:{"clientId": {"$oid": "66a93693c78fca5fee087a13"}, "message": "Connection pool ready", "serverHost": "ac-i5elyzx-shard-00-00.hduil2j.mongodb.net", "serverPort": 27017}
+DEBUG:pymongo.connection:{"clientId": {"$oid": "66a93693c78fca5fee087a13"}, "message": "Connection pool ready", "serverHost": "ac-i5elyzx-shard-00-02.hduil2j.mongodb.net", "serverPort": 27017}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-676-387
+DEBUG:pymongo.connection:{"clientId": {"$oid": "66a93694f1b25706576db6c1"}, "message": "Connection pool ready", "serverHost": "ac-i5elyzx-shard-00-02.hduil2j.mongodb.net", "serverPort": 27017}
+DEBUG:pymongo.connection:{"clientId": {"$oid": "66a93694f1b25706576db6c1"}, "message": "Connection pool ready", "serverHost": "ac-i5elyzx-shard-00-00.hduil2j.mongodb.net", "serverPort": 27017}
+DEBUG:pymongo.connection:{"clientId": {"$oid": "66a93694f1b25706576db6c1"}, "message": "Connection pool ready", "serverHost": "ac-i5elyzx-shard-00-01.hduil2j.mongodb.net", "serverPort": 27017}
